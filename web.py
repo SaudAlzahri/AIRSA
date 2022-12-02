@@ -184,7 +184,7 @@ else:
 #INDIVIDUAL LANE WIDTH COUNTS FOR 45%
 lanewidth = roadwidth / int(lanecount)
 if lanewidth <= 2:
-    score=score +0
+    score=score +8
 elif lanewidth <= 2.3:
     score=score+15
 elif lanewidth <= 2.65:
@@ -236,9 +236,8 @@ col1.image(my_image)
 #             alpha_matting_foreground_threshold=alpha_matting_foreground_threshold,
 #         )
 #     else:
-if score <= 400:
-	blackspot_coloring = '<p color:Red; font-size: 20px;">WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE!</p>'
-	col2.markdown(original_title, unsafe_allow_html=True)
+if score <= 40:
+	st.write("WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE")
 else:
 	pass
 
@@ -291,3 +290,6 @@ rf = pd.DataFrame(datanew,index=[0]).transpose()
 with coly:
 	st.write('AVERAGES')
 	st.dataframe(rf,use_container_width=True)
+	
+original_title = '<p style="font-family:Courier; color:Blue; font-size: 20px;">BLUE TEXT</p>'
+st.markdown(original_title, unsafe_allow_html=True)

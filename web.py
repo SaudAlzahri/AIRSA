@@ -305,6 +305,19 @@ st.markdown(original__title, unsafe_allow_html=True)
 
 originaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Saud Alzahri, Ahmad Almalik, Jude Alhazmi</p>'
 st.markdown(originaltitle, unsafe_allow_html=True)
-
-orginaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">CREDITS:</n>Tons of thanks to Mr. Panos and Naif Alzahri for  their continuous support and advice.</n></n>Credit to YOLO (v5)</n>Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</n></n></p>'
+st.write("""
+""")
+orginaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">CREDITS:</p>'
 st.markdown(orginaltitle, unsafe_allow_html=True)
+oginaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Tons of thanks to Mr. Panos and Naif Alzahri for  their continuous support and advice.</p>'
+st.markdown(oginaltitle, unsafe_allow_html=True)
+
+st.write("""
+""")
+
+ognaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Credit to YOLO (v5)</p>'
+st.markdown(ognaltitle, unsafe_allow_html=True)
+
+ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</p>'
+st.markdown(ognltitle, unsafe_allow_html=True)
+

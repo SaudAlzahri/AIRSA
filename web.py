@@ -266,11 +266,9 @@ with col2:
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
 
-st.header("STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA")
 
-
-original_title = '<p style="font-family:Courier; color:Cyan; font-size: 33px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
-st.markdown(original_title, unsafe_allow_html=True)
+original_tite = '<p style="font-family:Courier; color:Cyan; font-size: 33px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
+st.markdown(original_tite, unsafe_allow_html=True)
 
 
 st.write("Description of study: Our team took a total of 50 pictures of Riyadh's roads. Using AIRSA to analyze the results, we created the heat map below; the closer to green the higher the score (safe), and the closer to red the lower the score (unsafe).")
@@ -299,5 +297,14 @@ rf = pd.DataFrame(datanew,index=[0]).transpose()
 with coly:
 	st.write('AVERAGES')
 	st.dataframe(rf,use_container_width=True)
+
 	
 
+original__title = '<p style="font-family:Courier; color:Gray; font-size: 20px;">THE AIRSA TEAM</p>'
+st.markdown(original__title, unsafe_allow_html=True)
+
+originaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Saud Alzahri, Ahmad Almalik, Jude Alhazmi</p>'
+st.markdown(originaltitle, unsafe_allow_html=True)
+
+orginaltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">CREDITS:</n>Tons of thanks to Mr. Panos and Naif Alzahri for  their continuous support and advice.</n></n>Credit to YOLO (v5)</n>Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</n></n></p>'
+st.markdown(orginaltitle, unsafe_allow_html=True)

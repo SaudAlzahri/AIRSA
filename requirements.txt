@@ -7,7 +7,7 @@ colorama
 ipython  # interactive notebook
 matplotlib>=3.2.2
 numpy>=1.18.5
-opencv-python>=4.1.1
+opencv-python-headless
 Pillow>=7.1.2
 psutil  # system resources
 PyYAML>=5.3.1
@@ -27,7 +27,7 @@ tensorboard>=2.4.1
 # Plotting --------------------------------------------------------------------
 pandas>=1.1.4
 seaborn>=0.11.0
-opencv-python
+
 # Export ----------------------------------------------------------------------
 # coremltools>=6.0  # CoreML export
 # onnx>=1.9.0  # ONNX export

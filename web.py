@@ -5,27 +5,26 @@ from PIL import Image
 import base64
 import requests
 from io import BytesIO
-
+import torch
 
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
 
 
-st.header("AIRSA")
-st.write("Please upload a picture of a street:")
+st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
+st.write("AIRSA's goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.")
 
-st.write("Please input an image, road width and number of lanes to get analyzed!")
 st.write(
-    ":rocket: Please read the score STATISTICS below!"
+    ":rocket: STATISTICS"
 )
-st.sidebar.write("## Upload and data :gear:")
+st.sidebar.write("## Try it out! :gear:")
 
-img_url = st.sidebar.text_input('IMAGE URL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
+img_url = st.sidebar.text_input(':frame_with_picture: IMAGE URL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
 
 
-roadwidth = int(st.sidebar.text_input('street width', '14'))
+roadwidth = int(st.sidebar.text_input(':car: ROAD WIDTH', '14'))
 
-lanecount = int(st.sidebar.text_input('street lanes', '5'))
+lanecount = int(st.sidebar.text_input(':railway_track: LANE COUNT', '5'))
 
 
 
@@ -58,11 +57,7 @@ my_image = Image.open(BytesIO(response.content))
 #         st.write(confusion_matrix)
 
 
-import torch
 
-#img_url = input('\033[1m' + "Insert image address: " + '\033[0m')
-#roadwidth = int((input('\033[1m' + "How wide is the road? " + '\033[0m')).replace(" meters", "").replace("m", "").replace(" m", ""))
-#lanecount = int(input('\033[1m' + "How many lanes are there? " + '\033[0m'))
 
 
 
@@ -231,7 +226,7 @@ else:
 
 
 
-col1.write("Original Image Uploaded")
+col1.write("INSERTED IMAGE")
 col1.image(my_image)
 #     if alpha_matting:
 #         fixed = remove(
@@ -265,6 +260,33 @@ with col2:
 	st.sidebar.markdown("\n")
 
 
+st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
 
-#
+st.header("STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA")
+st.write("Description of study: Our team took a total of 50 pictures of Riyadh's roads. Using AIRSA to analyze the results, we created the heat map below; the closer to green the higher the score (safe), and the closer to red the lower the score (unsafe).")
+
+coli, coly = st.columns(2)
+
+with coli:
+	st.write('HEAT MAP')
+	st.image(4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA)
+	
+
+
+
+
+	
+datanew = {
+	'Average Score [%]': str(60.68),
+	'Average Lane Width [meters]': str(5.04),
+	'Average Traffic Light Presence [%]': str(18),
+	'Average Stop Sign Presence [%]': str(12)
+}
+
+
+
+rf = pd.DataFrame(datanew,index=[0]).transpose()
+with coly:
+	st.write('AVERAGES')
+	st.dataframe(rf,use_container_width=True)

@@ -20,6 +20,10 @@ st.markdown(original_title, unsafe_allow_html=True)
 st.write(
     ":rocket: STATISTICS"
 )
+
+
+original_titl = '<p style="font-family:Courier; color:Cyan; font-size: 30px;">## TRY IT OUT! :gear:</p>'
+st.sidebar.markdown(original_titl, unsafe_allow_html=True)
 st.sidebar.write("## Try it out! :gear:")
 
 img_url = st.sidebar.text_input(':frame_with_picture: IMAGE URL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')

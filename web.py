@@ -236,17 +236,18 @@ col1.image(my_image)
 #             alpha_matting_foreground_threshold=alpha_matting_foreground_threshold,
 #         )
 #     else:
-if score <= 40:
-	col2.write('WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE!')
+if score <= 400:
+	blackspot_coloring = '<p color:Red; font-size: 20px;">WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE!</p>'
+	col2.markdown(original_title, unsafe_allow_html=True)
 else:
 	pass
 
-data = {'Safety Score [%]': str(score),
-        'Width of lane [meters]': str(roadwidth / int(lanecount)),
-        'Approx. cars per lane [cars]': str(carcount/lanecount),
-        'Presence of traffic light':trafficlightpresence,
-        'Presence of stop sign': stopsignpresence,
-        'total cars': str(carcount)}
+data = {'Safety Score': str(score),
+        'Lane Width': str(roadwidth / int(lanecount)) + "meters",
+        'Approx. cars per lane': str(carcount/lanecount),
+        'Traffic Light Presence':trafficlightpresence,
+        'Stop Sign Presence': stopsignpresence,
+        'Car Count': str(carcount)}
 
 
 
@@ -278,10 +279,10 @@ with coli:
 
 	
 datanew = {
-	'Average Score [%]': str(60.68),
-	'Average Lane Width [meters]': str(5.04),
-	'Average Traffic Light Presence [%]': str(18),
-	'Average Stop Sign Presence [%]': str(12)
+	'Average Score': "60.68",
+	'Average Lane Width': "5.04 meters",
+	'Average Traffic Light Presence': "18%",
+	'Average Stop Sign Presence': "12%"
 }
 
 

@@ -12,7 +12,6 @@ st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool
 
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
-st.write("AIRSA's goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.")
 
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 13px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.</p>'
 st.markdown(original_title, unsafe_allow_html=True)
@@ -268,6 +267,12 @@ st.write("In the future AIRSA will be able to provide more advanced statistics t
 
 
 st.header("STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA")
+
+
+original_title = '<p style="font-family:Courier; color:Cyan; font-size: 23px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
+st.markdown(original_title, unsafe_allow_html=True)
+
+
 st.write("Description of study: Our team took a total of 50 pictures of Riyadh's roads. Using AIRSA to analyze the results, we created the heat map below; the closer to green the higher the score (safe), and the closer to red the lower the score (unsafe).")
 
 coli, coly = st.columns(2)

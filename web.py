@@ -269,7 +269,7 @@ st.write("In the future AIRSA will be able to provide more advanced statistics t
 st.header("STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA")
 
 
-original_title = '<p style="font-family:Courier; color:Cyan; font-size: 23px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
+original_title = '<p style="font-family:Courier; color:Cyan; font-size: 33px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 
 

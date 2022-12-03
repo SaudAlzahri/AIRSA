@@ -243,18 +243,20 @@ except NameError:
 	pass
 
 #INDIVIDUAL LANE WIDTH COUNTS FOR 45%
-lanewidth = roadwidth / int(lanecount)
-if lanewidth <= 2:
-    score=score +8
-elif lanewidth <= 2.3:
-    score=score+15
-elif lanewidth <= 2.65:
-    score=score+27
-elif lanewidth <= 3:
-    score =score+37
-else:
-    score= score+45
-
+try:
+	lanewidth = roadwidth / int(lanecount)
+	if lanewidth <= 2:
+	    score=score +8
+	elif lanewidth <= 2.3:
+	    score=score+15
+	elif lanewidth <= 2.65:
+	    score=score+27
+	elif lanewidth <= 3:
+	    score =score+37
+	else:
+	    score= score+45
+except NameError:
+	pass
 
 
 #LANE COUNT COUNTS FOR 20%

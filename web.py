@@ -34,8 +34,8 @@ oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMA
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
 img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
 ###########################################
-					riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
-					st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
+#riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
+#st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
 ##########################################
 st.sidebar.markdown("""---""")
 #roadwidth input

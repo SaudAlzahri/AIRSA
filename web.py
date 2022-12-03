@@ -316,11 +316,7 @@ else:
 #             alpha_matting_foreground_threshold=alpha_matting_foreground_threshold,
 #         )
 #     else:
-if score <= 40:
-	riinatitl = '<p style="font-family:Courier; color:Red; font-size: 17px;"><b>WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE!</b></p>'
-	col2.markdown(str(riinatitl), unsafe_allow_html=True)
-else:
-	pass
+
 
 try:
 	data = {'Safety Score': str(score),
@@ -334,7 +330,11 @@ try:
 	
 	with col2:
 		st.write('STATISTICS')
-
+		if score <= 40:
+			riinatitl = '<p style="font-family:Courier; color:Red; font-size: 17px;"><b>WARNING: BLACKSPOT - HIGH POTENTIAL CAR CRASH SITE!</b></p>'
+			col2.markdown(str(riinatitl), unsafe_allow_html=True)
+		else:
+			pass
 		st.dataframe(df,use_container_width=True)
 		st.sidebar.markdown("\n")
 except NameError:

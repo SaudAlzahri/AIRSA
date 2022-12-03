@@ -146,7 +146,8 @@ if img_url_invalid == False:
 	import re
 	def subit(m):
 	    stuff, word = m.groups()
-	    return ("_" * len(stuff)) + wordwaw = (re.sub(r'(.+?)(CAR|STOP SIGN|TRAFFIC LIGHT|BUS|TRUCK|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|118|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|$)', subit, waw))
+	    return ("_" * len(stuff)) + word
+	waw = (re.sub(r'(.+?)(CAR|STOP SIGN|TRAFFIC LIGHT|BUS|TRUCK|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|118|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|$)', subit, waw))
 	waw = waw.replace("__", "  ").replace("_", " ").replace("  ", " ")
 	waw = waw.replace("  1   ", "  ").replace("  2   ", "  ").replace("  3   ", "  ").replace("  4   ", "  ").replace("  5   ", "  ").replace("  6   ", "  ").replace("  7   ", "  ").replace("  8   ", "  ").replace("  9   ", "  ").replace("  10   ", "  ").replace("  11   ", "  ").replace("  12   ", "  ").replace("  13   ", "  ").replace("  14   ", "  ").replace("  15   ", "  ").replace("  16   ", "  ").replace("  17   ", "  ").replace("  18   ", "  ").replace("  19   ", "  ").replace("  20   ", "  ").replace("  21   ", "  ").replace("  22   ", "  ").replace("  23   ", "  ").replace("  24   ", "  ").replace("  25   ", "  ").replace("  26   ", "  ").replace("  27   ", "  ").replace("  28   ", "  ").replace("  29   ", "  ").replace("  30   ", "  ").replace("  31   ", "  ").replace("    ", " ")
 

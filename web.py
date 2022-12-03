@@ -8,17 +8,7 @@ from io import BytesIO
 import torch
 
 # set full screen width
-st.set_page_config(
-    page_title="AIRSA: Road Safety Assessment Tool",
-    page_icon="🚦",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'PROJECT CODE': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
+st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool", page_icon="🚦",)
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 14px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Other outputs such as road width, lane count, and individual lane width are factors of the safety formula.</p>'

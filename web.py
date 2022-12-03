@@ -17,7 +17,7 @@ st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 13px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 
-st.header(
+st.write(
     ":rocket:"
 )
 
@@ -283,7 +283,7 @@ with col2:
 
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
-st.header(
+st.write(
 	":satellite:"
 )
 
@@ -327,7 +327,7 @@ with coly:
 url = "https://github.com/SaudAlzahri/AIRSA"
 st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
 
-st.header(
+st.write(
     ":flying_saucer:"
 )
 original__title = '<p style="font-family:Courier; color:Gray; font-size: 20px;">THE AIRSA TEAM</p>'

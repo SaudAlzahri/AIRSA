@@ -84,7 +84,7 @@ img_with_boxes = r_img[0] # image with boxes as np.array
 col1, col2 = st.columns(2)
 
 
-if img_url_invalid == False:
+try:
 	response = requests.get(img_url)
 	my_image = Image.open(BytesIO(response.content))
 # alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)
@@ -120,7 +120,7 @@ if img_url_invalid == False:
 
 # YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
 	model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
-else:
+except AttributeError:
 	pass
 ######################### _-_-_
 

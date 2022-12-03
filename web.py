@@ -17,7 +17,7 @@ st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 13px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 
-st.write(
+st.header(
     ":rocket:"
 )
 
@@ -25,7 +25,7 @@ orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESU
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
 
 
-st.sidebar.header(":gear:")
+
 original_titl = '<p style="font-family:Courier; color:Cyan; font-size: 30px;">TRY IT OUT!</p>'
 st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 
@@ -46,7 +46,7 @@ orinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">LANE 
 st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 lanecount = int(st.sidebar.text_input('', '5'))
 
-
+st.sidebar.header(":gear:")
 
 
 col1, col2 = st.columns(2)
@@ -283,7 +283,7 @@ with col2:
 
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
-st.write(
+st.header(
 	":satellite:"
 )
 
@@ -327,7 +327,7 @@ with coly:
 url = "https://github.com/SaudAlzahri/AIRSA"
 st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
 
-st.write(
+st.header(
     ":flying_saucer:"
 )
 original__title = '<p style="font-family:Courier; color:Gray; font-size: 20px;">THE AIRSA TEAM</p>'

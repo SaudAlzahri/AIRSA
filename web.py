@@ -22,16 +22,18 @@ st.write(
 )
 
 
+st.sidebar.header(":gear:")
 original_titl = '<p style="font-family:Courier; color:Cyan; font-size: 30px;">TRY IT OUT!</p>'
 st.sidebar.markdown(original_titl, unsafe_allow_html=True)
-st.sidebar.header(":gear:")
 
-img_url = st.sidebar.text_input(':frame_with_picture: IMAGE URL', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
+oriinal_titl = '<p style="font-family:Courier; color:Yellow; font-size: 17px;">IMAGE URL</p>'
+img_url = st.sidebar.text_input(':frame_with_picture:' + oriinal_titl, unsafe_allow_html=True, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
 
+oriinl_titl = '<p style="font-family:Courier; color:Yellow; font-size: 17px;">ROAD WIDTH (METERS)</p>'
+roadwidth = int(st.sidebar.text_input(':car:' + oriinl_titl, unsafe_allow_html=True, '14'))
 
-roadwidth = int(st.sidebar.text_input(':car: ROAD WIDTH', '14'))
-
-lanecount = int(st.sidebar.text_input(':railway_track: LANE COUNT', '5'))
+orinl_titl = '<p style="font-family:Courier; color:Yellow; font-size: 17px;">LANE COUNT</p>'
+lanecount = int(st.sidebar.text_input(':railway_track:' + orinl_titl, unsafe_allow_html=True, '5'))
 
 
 

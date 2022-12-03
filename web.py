@@ -263,7 +263,7 @@ else:
 	pass
 
 data = {'Safety Score': str(score),
-        'Lane Width': str(roadwidth / int(lanecount)) + "meters",
+        'Lane Width': str(roadwidth / int(lanecount)) + "m",
         'Approx. cars per lane': str(carcount/lanecount),
         'Traffic Light Presence':trafficlightpresence,
         'Stop Sign Presence': stopsignpresence,

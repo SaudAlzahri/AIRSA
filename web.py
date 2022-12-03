@@ -26,24 +26,24 @@ st.sidebar.header(":gear:")
 original_titl = '<p style="font-family:Courier; color:Cyan; font-size: 30px;">TRY IT OUT!</p>'
 st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 
-st.markdown("""---""")
+st.sidebar.markdown("""---""")
 
 oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
 img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
-st.markdown("""---""")
+st.sidebar.markdown("""---""")
 
 
 oriinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">ROAD WIDTH (METERS)</p>'
 st.sidebar.markdown(str(oriinl_titl), unsafe_allow_html=True)
 roadwidth = int(st.sidebar.text_input('', '14'))
-st.markdown("""---""")
+st.sidebar.markdown("""---""")
 
 
 orinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">LANE COUNT</p>'
 st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 lanecount = int(st.sidebar.text_input('', '5'))
-st.markdown("""---""")
+st.sidebar.markdown("""---""")
 
 
 

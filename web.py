@@ -272,7 +272,7 @@ else:
 
 
 col1.write("INSERTED IMAGE")
-col1.image(my_image)
+col1.image(img_with_boxes)
 #     if alpha_matting:
 #         fixed = remove(
 #             image,

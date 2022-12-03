@@ -16,7 +16,7 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 im = 'HiddenStop.2.jpg'
 
 # Inference
-results = model(img_path)
+results = model(im)
 r_img = results.render() # returns a list with the images as np.array
 img_with_boxes = r_img[0] # image with boxes as np.array
 

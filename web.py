@@ -33,7 +33,7 @@ try:
 	oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 	st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
 	img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
-except requests.exceptions.MissingSchema:
+except requests:
 	riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
 	st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
 st.sidebar.markdown("""---""")
@@ -78,8 +78,10 @@ img_with_boxes = r_img[0] # image with boxes as np.array
 
 col1, col2 = st.columns(2)
 
-response = requests.get(img_url)
-my_image = Image.open(BytesIO(response.content))
+
+try:
+	response = requests.get(img_url)
+	my_image = Image.open(BytesIO(response.content))
 # alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)
 # if alpha_matting:
 #     alpha_matting_background_threshold = st.sidebar.number_input(
@@ -112,8 +114,9 @@ my_image = Image.open(BytesIO(response.content))
 
 
 # YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
-
+	model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
+except requests.exceptions.MissingSchema:
+	pass
 ######################### _-_-_
 
 

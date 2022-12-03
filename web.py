@@ -19,7 +19,7 @@ st.markdown(original_title, unsafe_allow_html=True)
 st.write(
     ":rocket:"
 )
-img_url_invalid == False
+
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
 uouo = '<p style="font-family:Courier; color:Gold; font-size: 9px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
@@ -33,9 +33,9 @@ st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
 img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
-
+img_url_invalid = False
 if img_url == "":
-	img_url_invalid == True
+	img_url_invalid = True
 	riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
 	st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
 else:

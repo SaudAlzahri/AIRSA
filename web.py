@@ -10,17 +10,6 @@ import torch
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
 
-url__ = 'https://stackoverflow.com'
-
-st.markdown(f'''
-<a href={url__}><button style="background-color:Black;font-size:11px; color:Gold; text-align: right; button-align: right;">Project Code</button></a>
-''',
-unsafe_allow_html=True)
-
-url = "https://www.streamlit.io"
-st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
-
-
 
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
@@ -334,6 +323,9 @@ with coly:
 	st.dataframe(rf,use_container_width=True)
 
 	
+
+url = "https://github.com/SaudAlzahri/AIRSA"
+st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
 
 original__title = '<p style="font-family:Courier; color:Gray; font-size: 20px;">THE AIRSA TEAM</p>'
 st.markdown(original__title, unsafe_allow_html=True)

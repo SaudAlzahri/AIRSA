@@ -20,7 +20,7 @@ st.write(
     ":rocket:"
 )
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
-st.sidebar.markdown(str(orinal_titl), unsafe_allow_html=True)
+st.markdown(str(orinal_titl), unsafe_allow_html=True)
 
 
 st.sidebar.header(":gear:")
@@ -294,7 +294,7 @@ coli, coly = st.columns(2)
 with coli:
 	
 	heat = '<p style="font-family:Courier; color:Gold; font-size: 17px;">HEAT MAP</p>'
-	st.sidebar.markdown(str(heat), unsafe_allow_html=True)
+	st.markdown(str(heat), unsafe_allow_html=True)
 	
 	response_study = requests.get('https://i.imgur.com/wVVVrDC.png')
 	my_study_image = Image.open(BytesIO(response_study.content))
@@ -314,7 +314,7 @@ datanew = {
 rf = pd.DataFrame(datanew,index=[0]).transpose()
 with coly:
 	average = '<p style="font-family:Courier; color:Gold; font-size: 17px;">AVERAGES</p>'
-	st.sidebar.markdown(str(average), unsafe_allow_html=True)
+	st.markdown(str(average), unsafe_allow_html=True)
 	
 	st.dataframe(rf,use_container_width=True)
 

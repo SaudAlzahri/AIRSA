@@ -10,10 +10,10 @@ import torch
 import torch
 import pathlib
 
-img_path = pathlib.Path('pedestrian (2).png')
+img_path = pathlib.Path('HiddenStop.2.jpg')
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5n')
-results = model('HiddenStop.2.jpg')
+results = model(img_path)
 r_img = results.render() # returns a list with the images as np.array
 img_with_boxes = r_img[0] # image with boxes as np.array
 

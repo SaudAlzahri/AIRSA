@@ -108,9 +108,18 @@ my_image = Image.open(BytesIO(response.content))
 # YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
 
+######################### _-_-_
+
+
+# Image
+
 # Inference
 results = model(img_url)
+r_img = results.render() # returns a list with the images as np.array
+img_with_boxes = r_img[0] # image with boxes as np.array
 
+
+##########################
 
 
 # YOLO'S STRING NEEDS FILTERING OUT THE TRASH WORDS THAT ARE NOT GOING BE CONVERTED TO USABLE VALUES

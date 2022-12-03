@@ -8,7 +8,7 @@ from io import BytesIO
 import torch
 
 # set full screen width
-st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
+st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool",page_icon="🚦")
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 

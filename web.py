@@ -42,7 +42,7 @@ try:
 	oriinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">ROAD WIDTH (METERS)</p>'
 	st.sidebar.markdown(str(oriinl_titl), unsafe_allow_html=True)
 	roadwidth = int(st.sidebar.text_input('', '14'))
-except requests.exceptions.MissingSchema:
+except ValueError:
 	riinal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the ROAD WIDTH box empty.</p>'
 	st.sidebar.markdown(str(riinal_titl), unsafe_allow_html=True)
 st.sidebar.markdown("""---""")
@@ -51,7 +51,7 @@ try:
 	orinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">LANE COUNT</p>'
 	st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 	lanecount = int(st.sidebar.text_input('', '5'))
-except requests.exceptions.MissingSchema:
+except ValueError:
 	riinal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the ROAD WIDTH box empty.</p>'
 	st.sidebar.markdown(str(riinal_titl), unsafe_allow_html=True)
 st.sidebar.header(":gear:")

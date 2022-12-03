@@ -3,4 +3,3 @@ port = 80
 
 [theme]
 base="dark"
-print("you are connected")

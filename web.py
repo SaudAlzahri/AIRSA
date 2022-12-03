@@ -6,7 +6,6 @@ import base64
 import requests
 from io import BytesIO
 import torch
-from yolov5 import detect
 
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
@@ -49,12 +48,6 @@ lanecount = int(st.sidebar.text_input('', '5'))
 st.sidebar.header(":gear:")
 
 
-# # # image bounding boxing
-
-detect.run(source=img_url, weights="yolov5s6.pt", conf_thres=0.25, imgsz=640)#YOLOFY
-
-
-# # # 
 
 
 col1, col2 = st.columns(2)

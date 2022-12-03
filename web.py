@@ -10,6 +10,7 @@ import torch
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
 
+st.markdown('<div style="text-align: right; font-size: 9px; color:Gold;">Hello World!</div>', unsafe_allow_html=True)
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 

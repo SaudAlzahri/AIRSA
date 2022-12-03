@@ -84,7 +84,7 @@ img_with_boxes = r_img[0] # image with boxes as np.array
 col1, col2 = st.columns(2)
 
 
-if image_url_invalid == False:
+if img_url_invalid == False:
 	response = requests.get(img_url)
 	my_image = Image.open(BytesIO(response.content))
 	# alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)

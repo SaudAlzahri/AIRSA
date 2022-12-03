@@ -116,8 +116,9 @@ try:
 
 # YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
 	model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
-except requests.exceptions.MissingSchema:
-	pass
+except AttributeError:
+	riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
+	st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
 ######################### _-_-_
 
 

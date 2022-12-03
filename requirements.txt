@@ -2,6 +2,7 @@
 # Usage: pip install -r requirements.txt
 
 # Base ------------------------------------------------------------------------
+pathlib
 gitpython
 colorama
 ipython  # interactive notebook

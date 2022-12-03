@@ -19,7 +19,7 @@ st.markdown(original_title, unsafe_allow_html=True)
 st.write(
     ":rocket:"
 )
-
+img_url_invalid == False
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
 uouo = '<p style="font-family:Courier; color:Gold; font-size: 9px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
@@ -33,10 +33,14 @@ st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
 img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
-###########################################
-#riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
-#st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
-##########################################
+
+if img_url == "":
+	img_url_invalid == True
+	riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
+	st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
+else:
+	pass
+
 st.sidebar.markdown("""---""")
 #roadwidth input
 try:
@@ -80,7 +84,7 @@ img_with_boxes = r_img[0] # image with boxes as np.array
 col1, col2 = st.columns(2)
 
 
-try:
+if img_url_invalid == False:
 	response = requests.get(img_url)
 	my_image = Image.open(BytesIO(response.content))
 # alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)
@@ -116,9 +120,8 @@ try:
 
 # YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
 	model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
-except AttributeError or MissingSchema or requests or exceptions or InvalidURL or MissingSchemaInvalidURL:
-	riginal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the IMAGE URL box empty.</p>'
-	st.sidebar.markdown(str(riginal_titl), unsafe_allow_html=True)
+else:
+	pass
 ######################### _-_-_
 
 

@@ -260,15 +260,17 @@ except NameError:
 
 
 #LANE COUNT COUNTS FOR 20%
-if lanecount <= 2:
-    score =score+1
-elif lanecount <= 4:
-    score = score + 10
-elif score <= 5:
-    score =score +15
-else:
-    score = score + 20
-
+try:
+	if lanecount <= 2:
+	    score =score+1
+	elif lanecount <= 4:
+	    score = score + 10
+	elif score <= 5:
+	    score =score +15
+	else:
+	    score = score + 20
+except NameError:
+	pass
 
 
 # #PRINTING OUTPUT FINALLY!

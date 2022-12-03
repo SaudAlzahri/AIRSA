@@ -5,6 +5,7 @@
 gitpython
 colorama
 yolov5
+cv2
 ipython  # interactive notebook
 matplotlib>=3.2.2
 numpy>=1.18.5

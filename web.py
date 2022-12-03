@@ -228,16 +228,19 @@ else:
 
 
 #ROAD WIDTH COUNTS FOR 5%
-if roadwidth <= 6:
-    score=score+1
-elif roadwidth <= 9:
-    score=score+2
-elif roadwidth <= 13:
-    score =score+3
-elif roadwidth <= 22:
-    score = score + 4
-else:
-    score =+ 5
+try:
+	if roadwidth <= 6:
+	    score=score+1
+	elif roadwidth <= 9:
+	    score=score+2
+	elif roadwidth <= 13:
+	    score =score+3
+	elif roadwidth <= 22:
+	    score = score + 4
+	else:
+	    score =+ 5
+except NameError:
+	pass
 
 #INDIVIDUAL LANE WIDTH COUNTS FOR 45%
 lanewidth = roadwidth / int(lanecount)

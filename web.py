@@ -8,6 +8,7 @@ from io import BytesIO
 import torch
 import albumentations as A
 import cv2
+from yolov5 import detect
 
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
@@ -50,6 +51,14 @@ lanecount = int(st.sidebar.text_input('', '5'))
 st.sidebar.header(":gear:")
 
 
+# # # image bounding boxing
+
+detect.run(source=img_url, weights="yolov5s6.pt", conf_thres=0.25, imgsz=640)#YOLOFY
+
+
+# # # 
+
+
 col1, col2 = st.columns(2)
 
 response = requests.get(img_url)
@@ -64,8 +73,7 @@ my_image = Image.open(BytesIO(response.content))
 #     )
 
 
-yimage = cv2.imread(img_url)
-yimage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
 
 
 
@@ -354,5 +362,4 @@ st.markdown(ognaltitle, unsafe_allow_html=True)
 ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</p>'
 st.markdown(ognltitle, unsafe_allow_html=True)
 
-my_study_image = Image.open(BytesIO(yimage.content))
-st.image(my_study_image)
+

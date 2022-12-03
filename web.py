@@ -6,11 +6,11 @@ import base64
 import requests
 from io import BytesIO
 import torch
+import albumentations as A
+import cv2
 
 # set full screen width
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool")
-
-
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 
@@ -64,6 +64,8 @@ my_image = Image.open(BytesIO(response.content))
 #     )
 
 
+yimage = cv2.imread(img_url)
+yimage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 
 
@@ -352,3 +354,5 @@ st.markdown(ognaltitle, unsafe_allow_html=True)
 ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</p>'
 st.markdown(ognltitle, unsafe_allow_html=True)
 
+my_study_image = Image.open(BytesIO(yimage.content))
+st.image(my_study_image)

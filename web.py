@@ -32,7 +32,7 @@ st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 #img_url input
 oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
-img_url = st.sidebar.text_input('', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsP7xEOzp5Ii4nV4STAR9HjnVJqPfJLz1rSwqN-qsp&s')
+img_url = st.sidebar.text_input('', 'https://a.cdn-hotels.com/gdcs/production196/d1429/5c2581f0-c31d-11e8-87bb-0242ac11000d.jpg?impolicy=fcrop&w=800&h=533&q=medium')
 img_url_invalid = False
 if img_url == "":
 	img_url_invalid = True

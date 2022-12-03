@@ -52,7 +52,7 @@ try:
 	st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 	lanecount = int(st.sidebar.text_input('', '5'))
 except ValueError:
-	riinal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the ROAD WIDTH box empty.</p>'
+	riinal_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">You left the LANE COUNT box empty.</p>'
 	st.sidebar.markdown(str(riinal_titl), unsafe_allow_html=True)
 st.sidebar.header(":gear:")
 

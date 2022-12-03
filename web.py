@@ -66,8 +66,6 @@ r_img = results.render() # returns a list with the images as np.array
 img_with_boxes = r_img[0] # image with boxes as np.array
 
 
-#print
-st.image(img_with_boxes)
 ##########################
 
 
@@ -376,5 +374,4 @@ ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yáµ’áµ
 st.markdown(ognltitle, unsafe_allow_html=True)
 
 ################################### _-_-_
-st.image(img_with_boxes)
-####################################
+

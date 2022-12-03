@@ -57,6 +57,7 @@ st.sidebar.header(":gear:")
 # Model
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
+im = 'HiddenStop.2.jpg'
 
 # Inference
 results = model(im)

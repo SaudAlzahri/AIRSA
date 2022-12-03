@@ -6,8 +6,6 @@ import base64
 import requests
 from io import BytesIO
 import torch
-import albumentations as A
-import cv2
 from yolov5 import detect
 
 # set full screen width

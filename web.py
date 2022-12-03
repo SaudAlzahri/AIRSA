@@ -327,6 +327,9 @@ with coly:
 url = "https://github.com/SaudAlzahri/AIRSA"
 st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
 
+st.write(
+    ":flying_saucer:"
+)
 original__title = '<p style="font-family:Courier; color:Gray; font-size: 20px;">THE AIRSA TEAM</p>'
 st.markdown(original__title, unsafe_allow_html=True)
 

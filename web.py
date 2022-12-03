@@ -18,7 +18,7 @@ st.markdown(f'''
 unsafe_allow_html=True)
 
 url = "https://www.streamlit.io"
-st.markdown("[PROJECT CODE](%s)" % url)
+st.markdown("[:gear:PROJECT CODE:gear:](%s)" % url)
 
 
 

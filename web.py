@@ -16,10 +16,11 @@ st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 13px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 
-
 st.write(
-    ":rocket: STATISTICS"
+    ":rocket:"
 )
+orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
+st.sidebar.markdown(str(orinal_titl), unsafe_allow_html=True)
 
 
 st.sidebar.header(":gear:")
@@ -281,7 +282,7 @@ with col2:
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
 
-
+st.sidebar.markdown("""---""")
 original_tite = '<p style="font-family:Courier; color:Cyan; font-size: 33px;">STATISTICS ON ROAD SAFETY IN RIYADH, SAUDI ARABIA - analyzed by AIRSA</p>'
 st.markdown(original_tite, unsafe_allow_html=True)
 
@@ -291,8 +292,10 @@ st.write("Description of study: Our team took a total of 50 pictures of Riyadh's
 coli, coly = st.columns(2)
 
 with coli:
-	st.write('HEAT MAP')
-		
+	
+	heat = '<p style="font-family:Courier; color:Gold; font-size: 17px;">HEAT MAP</p>'
+	st.sidebar.markdown(str(heat), unsafe_allow_html=True)
+	
 	response_study = requests.get('https://i.imgur.com/wVVVrDC.png')
 	my_study_image = Image.open(BytesIO(response_study.content))
 	st.image(my_study_image)
@@ -310,7 +313,9 @@ datanew = {
 
 rf = pd.DataFrame(datanew,index=[0]).transpose()
 with coly:
-	st.write('AVERAGES')
+	average = '<p style="font-family:Courier; color:Gold; font-size: 17px;">AVERAGES</p>'
+	st.sidebar.markdown(str(average), unsafe_allow_html=True)
+	
 	st.dataframe(rf,use_container_width=True)
 
 	

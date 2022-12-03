@@ -6,24 +6,7 @@ import base64
 import requests
 from io import BytesIO
 import torch
-######################### _-_-_
-import torch
 
-# Model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
-
-# Image
-im = 'HiddenStop.2.jpg'
-
-# Inference
-results = model(im)
-r_img = results.render() # returns a list with the images as np.array
-img_with_boxes = r_img[0] # image with boxes as np.array
-
-
-#print
-st.image(img_with_boxes)
-##########################
 
 
 # set full screen width
@@ -65,6 +48,27 @@ st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 lanecount = int(st.sidebar.text_input('', '5'))
 
 st.sidebar.header(":gear:")
+
+
+
+
+######################### _-_-_
+
+# Model
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+
+# Image
+im = 'HiddenStop.2.jpg'
+
+# Inference
+results = model(im)
+r_img = results.render() # returns a list with the images as np.array
+img_with_boxes = r_img[0] # image with boxes as np.array
+
+
+#print
+st.image(img_with_boxes)
+##########################
 
 
 

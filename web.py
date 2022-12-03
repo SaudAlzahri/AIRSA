@@ -16,10 +16,13 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 im = 'HiddenStop.2.jpg'
 
 # Inference
-results = model(im)
+results = model(img_path)
+r_img = results.render() # returns a list with the images as np.array
+img_with_boxes = r_img[0] # image with boxes as np.array
+
 
 #print
-st.image(results)
+st.image(img_with_boxes)
 ##########################
 
 
@@ -369,5 +372,5 @@ ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yáµ’áµ
 st.markdown(ognltitle, unsafe_allow_html=True)
 
 ################################### _-_-_
-st.image(results)
+st.image(img_with_boxes)
 ####################################

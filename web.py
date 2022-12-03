@@ -10,7 +10,7 @@ import torch
 import torch
 import pathlib
 
-img_path = pathlib.Path('main/pedestrian (2).png')
+img_path = pathlib.Path('main/pedestrian(2).png')
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5n')
 results = model(img_path)

@@ -305,7 +305,7 @@ col1.write("INSERTED IMAGE")
 if img_url_invalid == False:
 	col1.image(img_with_boxes)
 else:
-	riinatitl = '<p style="font-family:Courier; color:Red; font-size: 12px;">The image cannot be loaded because you left the IMAGE URL box empty.</p>'
+	riinatitl = '<p style="font-family:Courier; color:Red; font-size: 8px;">The image cannot be loaded because you left the IMAGE URL box empty.</p>'
 	st.markdown(str(riinatitl), unsafe_allow_html=True)
 	st.sidebar.markdown("\n")
 #     if alpha_matting:

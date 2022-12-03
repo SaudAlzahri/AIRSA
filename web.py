@@ -6,6 +6,19 @@ import base64
 import requests
 from io import BytesIO
 import torch
+######################### _-_-_
+import torch
+import pathlib
+
+img_path = pathlib.Path('pedestrian.png')
+
+model = torch.hub.load('ultralytics/yolov5', 'yolov5n')
+results = model(img_path)
+r_img = results.render() # returns a list with the images as np.array
+img_with_boxes = r_img[0] # image with boxes as np.array
+
+st.image(results)
+##########################
 
 
 # set full screen width
@@ -353,4 +366,6 @@ st.markdown(ognaltitle, unsafe_allow_html=True)
 ognltitle = '<p style="font-family:Courier; color:Gray; font-size: 15px;">Yᵒᵘ Oᶰˡʸ Lᵒᵒᵏ Oᶰᶜᵉ</p>'
 st.markdown(ognltitle, unsafe_allow_html=True)
 
-
+################################### _-_-_
+st.image(results)
+####################################

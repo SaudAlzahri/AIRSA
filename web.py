@@ -304,13 +304,15 @@ if score <= 40:
 else:
 	pass
 
-data = {'Safety Score': str(score),
-        'Lane Width': str(roadwidth / int(lanecount)) + "m",
-        'Approx. cars per lane': str(carcount/lanecount),
-        'Traffic Light Presence':trafficlightpresence,
-        'Stop Sign Presence': stopsignpresence,
-        'Car Count': str(carcount)}
-
+try:
+	data = {'Safety Score': str(score),
+		'Lane Width': str(roadwidth / int(lanecount)) + "m",
+		'Approx. cars per lane': str(carcount/lanecount),
+		'Traffic Light Presence':trafficlightpresence,
+		'Stop Sign Presence': stopsignpresence,
+		'Car Count': str(carcount)}
+except NameError:
+	pass
 
 
 df = pd.DataFrame(data,index=[0]).transpose()

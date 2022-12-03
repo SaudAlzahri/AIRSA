@@ -19,7 +19,7 @@ st.markdown(original_title, unsafe_allow_html=True)
 st.write(
     ":rocket:"
 )
-st.markdown("""---""")
+
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
 
@@ -279,7 +279,7 @@ with col2:
 	st.dataframe(df,use_container_width=True)
 	st.sidebar.markdown("\n")
 
-st.markdown("""---""")
+
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")
 
 

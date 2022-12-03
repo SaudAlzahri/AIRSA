@@ -26,7 +26,6 @@ st.sidebar.header(":gear:")
 original_titl = '<p style="font-family:Courier; color:Cyan; font-size: 30px;">TRY IT OUT!</p>'
 st.sidebar.markdown(str(original_titl), unsafe_allow_html=True)
 
-st.sidebar.markdown("""---""")
 
 oriinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">IMAGE URL</p>'
 st.sidebar.markdown(str(oriinal_titl), unsafe_allow_html=True)
@@ -43,7 +42,7 @@ st.sidebar.markdown("""---""")
 orinl_titl = '<p style="font-family:Courier; color:Gold; font-size: 17px;">LANE COUNT</p>'
 st.sidebar.markdown(str(orinl_titl), unsafe_allow_html=True)
 lanecount = int(st.sidebar.text_input('', '5'))
-st.sidebar.markdown("""---""")
+
 
 
 

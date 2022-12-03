@@ -13,11 +13,11 @@ import pathlib
 img_path = pathlib.Path('HiddenStop.2.jpg')
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5n')
-results = model(img_path)
-r_img = results.render() # returns a list with the images as np.array
+#results = model(img_path)
+#r_img = results.render() # returns a list with the images as np.array
 img_with_boxes = r_img[0] # image with boxes as np.array
 
-st.image(results)
+st.image(img_with_boxes)
 ##########################
 
 

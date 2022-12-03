@@ -14,7 +14,7 @@ st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool
 
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 
-original_title = '<p style="font-family:Courier; color:Cyan; font-size: 6px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Other outputs such as road width, lane count, and individual lane width are factors of the safety formula.</p>'
+original_title = '<p style="font-family:Courier; color:Cyan; font-size: 16px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Other outputs such as road width, lane count, and individual lane width are factors of the safety formula.</p>'
 st.markdown(original_title, unsafe_allow_html=True)
 
 st.write(
@@ -23,7 +23,7 @@ st.write(
 
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
-uouo = '<p style="font-family:Courier; color:Gold; font-size: 14px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
+uouo = '<p style="font-family:Courier; color:Gold; font-size: 9px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
 st.markdown(str(uouo), unsafe_allow_html=True)
 
 

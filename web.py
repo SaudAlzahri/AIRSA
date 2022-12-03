@@ -17,6 +17,12 @@ st.markdown(f'''
 ''',
 unsafe_allow_html=True)
 
+url = "https://www.streamlit.io"
+st.markdown("[PROJECT CODE](%s)" % url)
+
+
+
+
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 
 original_title = '<p style="font-family:Courier; color:Cyan; font-size: 13px;">AIRSA\'s goal is to provide statistics on road safety using AI recognition. The AI model recognizes key factors of road safety (such as traffic light presence and stop sign presence) that are used in the safety formula. Factors of the safety formula, such as road width, lane count, and individual lane width are also parts of the safety formula.</p>'

@@ -8,16 +8,18 @@ from io import BytesIO
 import torch
 ######################### _-_-_
 import torch
-import pathlib
 
-img_path = pathlib.Path('HiddenStop.2.jpg')
+# Model
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
-model = torch.hub.load('ultralytics/yolov5', 'yolov5n')
-#results = model(img_path)
-#r_img = results.render() # returns a list with the images as np.array
-img_with_boxes = r_img[0] # image with boxes as np.array
+# Image
+im = 'HiddenStop.2.jpg'
 
-st.image(img_with_boxes)
+# Inference
+results = model(im)
+
+#print
+st.image(results)
 ##########################
 
 

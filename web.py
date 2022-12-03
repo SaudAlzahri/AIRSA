@@ -311,18 +311,18 @@ try:
 		'Traffic Light Presence':trafficlightpresence,
 		'Stop Sign Presence': stopsignpresence,
 		'Car Count': str(carcount)}
+	df = pd.DataFrame(data,index=[0]).transpose()
+	
+	
+	with col2:
+		st.write('STATISTICS')
+
+		st.dataframe(df,use_container_width=True)
+		st.sidebar.markdown("\n")
 except NameError:
-	pass
+	riina_titl = '<p style="font-family:Courier; color:Red; font-size: 17px;">The dataframe cannot be loaded because you left an input box empty.</p>'
+	st.col2.markdown(str(riina_titl), unsafe_allow_html=True)
 
-
-df = pd.DataFrame(data,index=[0]).transpose()
-
-
-with col2:
-	st.write('STATISTICS')
-
-	st.dataframe(df,use_container_width=True)
-	st.sidebar.markdown("\n")
 
 
 st.write("In the future AIRSA will be able to provide more advanced statistics than already, hopefully supporting pedestrian safety by recognizing sidewalk presence.")

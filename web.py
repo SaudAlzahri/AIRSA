@@ -13,7 +13,7 @@ st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool
 url__ = 'https://stackoverflow.com'
 
 st.markdown(f'''
-<a href={url__}><button style="background-color:Black;font-size:11px; color:Gold; text-align: right;">Project Code</button></a>
+<a href={url__}><button style="background-color:Black;font-size:11px; color:Gold; text-align: right; button-align: right;">Project Code</button></a>
 ''',
 unsafe_allow_html=True)
 

@@ -23,7 +23,7 @@ st.write(
 
 orinal_titl = '<p style="font-family:Courier; color:Gold; font-size: 24px;">RESULTS</p>'
 st.markdown(str(orinal_titl), unsafe_allow_html=True)
-uouo = '<p style="font-family:Courier; color:Gold; font-size: 7px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
+uouo = '<p style="font-family:Courier; color:Gold; font-size: 9px;">(Click the arrow in the top left corner for inputs. The section is labeled \'TRY IT OUT!\')</p>'
 st.markdown(str(uouo), unsafe_allow_html=True)
 
 

@@ -87,30 +87,30 @@ col1, col2 = st.columns(2)
 if image_url_invalid == False:
 	response = requests.get(img_url)
 	my_image = Image.open(BytesIO(response.content))
-# alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)
-# if alpha_matting:
-#     alpha_matting_background_threshold = st.sidebar.number_input(
-#         "Alpha matting background", value=10, min_value=0, max_value=2000, step=1
-#     )
-#     alpha_matting_foreground_threshold = st.sidebar.number_input(
-#         "Alpha matting foreground", value=240, min_value=0, max_value=500, step=5
-#     )
+	# alpha_matting = st.sidebar.checkbox("Include alpha matting (can sometimes improve removal)", value=False)
+	# if alpha_matting:
+	#     alpha_matting_background_threshold = st.sidebar.number_input(
+	#         "Alpha matting background", value=10, min_value=0, max_value=2000, step=1
+	#     )
+	#     alpha_matting_foreground_threshold = st.sidebar.number_input(
+	#         "Alpha matting foreground", value=240, min_value=0, max_value=500, step=5
+	#     )
 
 
 
 
 
 
-#################################
+	#################################
 
 
 
 
-# if st.button('Train model'):
-#     with st.spinner("Training ongoing"):
-#         clf, confusion_matrix = train_rf(df, cols_to_train)
-#         st.balloons()
-#         st.write(confusion_matrix)
+	# if st.button('Train model'):
+	#     with st.spinner("Training ongoing"):
+	#         clf, confusion_matrix = train_rf(df, cols_to_train)
+	#         st.balloons()
+	#         st.write(confusion_matrix)
 
 
 
@@ -118,7 +118,7 @@ if image_url_invalid == False:
 
 
 
-# YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
+	# YOLO VERSION 5 GETS THE IMAGE AND RETURNS IT IN MODEL AS A STRING
 	model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # yolov5n - yolov5x6 official model
 else:
 	pass

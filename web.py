@@ -8,7 +8,7 @@ from io import BytesIO
 import torch
 
 
-# set full screen width
+## Setting a Streamlit Website
 st.set_page_config(layout="wide", page_title="AIRSA: Road Safety Assessment Tool", page_icon="🚦",menu_items={'About': 'https://github.com/SaudAlzahri/AIRSA'})
 st.header("AIRSA — Artificial Intelligence Road Safety Analysis")
 
